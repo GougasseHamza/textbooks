@@ -11,6 +11,12 @@ Files are numbered in lecture order. `00_All_Chapters.pdf`, where present, is th
 | `compilers/03_Automating_Lexical_Analysis.pdf` | 21 |
 | `compilers/03b_Companion_Lexer_Generation.pdf` (what the automata are for) | 9 |
 
+Problem sets and solutions, in `compilers/problem-sets/`:
+`Problem_Set_1_Compilers_and_Computational_Theory.pdf` + `Problem_Set_1_Solutions.pdf`,
+`Problem_Set_2_Tokens_and_Regular_Expressions.pdf` + `Problem_Set_2_Solutions.pdf`,
+`Problem_Set_3_Automating_Lexical_Analysis.pdf` + `Problem_Set_3_Solutions.pdf`,
+`Comprehensive_Problem_Set_Lectures_1-3.pdf` (questions, quizzes and solutions in one file).
+
 ## Advanced Data Management
 | File | Pages |
 |---|---|
@@ -18,6 +24,10 @@ Files are numbered in lecture order. `00_All_Chapters.pdf`, where present, is th
 | `advanced-data-management/02_File_Organization_and_Storage.pdf` | 15 |
 | `advanced-data-management/03_Indexing.pdf` | 15 |
 | `advanced-data-management/04_Query_Processing_and_Operator_Algorithms.pdf` | 14 |
+
+Labs and class examples, in `advanced-data-management/labs/` (no official solutions; each textbook chapter has a lab companion section):
+`Lab_3_Indexing.pdf`, `Lab_4_Operators_Joins_Sorting_Aggregation.pdf`,
+`Chapter_1_Class_Examples.pdf`, `Chapter_4_Class_Examples.pdf`.
 
 ## Operations Research
 | File | Pages |
@@ -29,7 +39,11 @@ Files are numbered in lecture order. `00_All_Chapters.pdf`, where present, is th
 | `operations-research/04_Duality_of_Linear_Programs.pdf` | 26 |
 
 Problem sets and solutions, in `operations-research/problem-sets/`:
-`Graphs_Set_1.pdf`, `Graphs_Set_2.pdf`, `Problem_Set_2_Solutions.pdf`, `Problem_Set_3_Solutions.pdf`.
+`Problem_Set_1.pdf` + `Problem_Set_1_Solutions.pdf`,
+`Problem_Set_2.pdf` + `Problem_Set_2_Solutions.pdf`,
+`Problem_Set_3.pdf` + `Problem_Set_3_Solutions.pdf`,
+`LP_Problem_Set_with_Solutions.pdf` (classics, tricks and proofs for Lectures 1 to 3),
+`Graphs_Set_1.pdf`, `Graphs_Set_2.pdf` (graph models, companions to Chapter 1).
 
 ## Machine Learning
 | File | Pages |
@@ -39,3 +53,8 @@ Problem sets and solutions, in `operations-research/problem-sets/`:
 | `machine-learning/02_From_Representations_to_Decisions.pdf` | 32 |
 | `machine-learning/03_From_Fitting_to_Generalization.pdf` | 22 |
 | `machine-learning/04_Discriminative_and_Generative_Classification.pdf` | 27 |
+
+Exercises and project, in `machine-learning/exercises/`:
+`Exercises_Chapter_1.pdf` (no solutions yet),
+`Project_Part_1_Auditing_an_Intrusion_Detection_Dataset.pdf`,
+`Project_Part_2_Generative_and_Discriminative_Classification.pdf`.
