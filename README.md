@@ -42,6 +42,7 @@ Problem sets and solutions, in `operations-research/problem-sets/`:
 `Problem_Set_1.pdf` + `Problem_Set_1_Solutions.pdf`,
 `Problem_Set_2.pdf` + `Problem_Set_2_Solutions.pdf`,
 `Problem_Set_3.pdf` + `Problem_Set_3_Solutions.pdf`,
+`Problem_Set_4_Duality_with_Solutions.pdf` (Lecture 4: quick checks, six problems, solutions),
 `LP_Problem_Set_with_Solutions.pdf` (classics, tricks and proofs for Lectures 1 to 3),
 `Graphs_Set_1.pdf`, `Graphs_Set_2.pdf` (graph models, companions to Chapter 1).
 
