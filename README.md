@@ -37,6 +37,7 @@ Labs and class examples, in `advanced-data-management/labs/` (no official soluti
 | `operations-research/02_Geometry_and_Algebra_of_Linear_Programs.pdf` | 21 |
 | `operations-research/03_Solving_Linear_Programs.pdf` | 17 |
 | `operations-research/04_Duality_of_Linear_Programs.pdf` | 26 |
+| `operations-research/How_to_Write_a_Dual.pdf` (methodology guide: the sign rules and why) | 6 |
 
 Problem sets and solutions, in `operations-research/problem-sets/`:
 `Problem_Set_1.pdf` + `Problem_Set_1_Solutions.pdf`,
