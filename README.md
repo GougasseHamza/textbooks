@@ -51,7 +51,7 @@ Problem sets and solutions, in `operations-research/problem-sets/`:
 | File | Pages |
 |---|---|
 | `machine-learning/00_All_Chapters.pdf` (Lectures 1 to 4 combined) | 97 |
-| `machine-learning/ML_Lectures_1-4_One_Continuous_Read.pdf` (every concept, named formula and course-style derivation in one read, with a notation key and a formula sheet) | 29 |
+| `machine-learning/ML_Lectures_1-4_One_Continuous_Read.pdf` (every concept, named formula and course-style derivation in one read, with a notation key and a formula sheet) | 30 |
 | `machine-learning/01_What_Does_It_Mean_to_Learn.pdf` | 24 |
 | `machine-learning/02_From_Representations_to_Decisions.pdf` | 32 |
 | `machine-learning/03_From_Fitting_to_Generalization.pdf` | 22 |
