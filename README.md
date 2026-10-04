@@ -51,13 +51,13 @@ Problem sets and solutions, in `operations-research/problem-sets/`:
 | File | Pages |
 |---|---|
 | `machine-learning/00_All_Chapters.pdf` (Lectures 1 to 4 combined) | 97 |
-| `machine-learning/ML_Lectures_1-4_One_Continuous_Read.pdf` (every concept and formula in one 19-page read, with a formula sheet) | 19 |
+| `machine-learning/ML_Lectures_1-4_One_Continuous_Read.pdf` (every concept, formula and course-style derivation in one 25-page read, with a formula sheet) | 25 |
 | `machine-learning/01_What_Does_It_Mean_to_Learn.pdf` | 24 |
 | `machine-learning/02_From_Representations_to_Decisions.pdf` | 32 |
 | `machine-learning/03_From_Fitting_to_Generalization.pdf` | 22 |
 | `machine-learning/04_Discriminative_and_Generative_Classification.pdf` | 27 |
 
 Exercises and project, in `machine-learning/exercises/`:
-`Exercises_Chapter_1.pdf` (no solutions yet),
+`Exercises_Chapter_1.pdf`, `Exercises_Chapter_2.pdf`, `Review_Questions_Lecture_3.pdf`, `Tutorial_1.pdf` (worked inside the one-read document),
 `Project_Part_1_Auditing_an_Intrusion_Detection_Dataset.pdf`,
 `Project_Part_2_Generative_and_Discriminative_Classification.pdf`.
