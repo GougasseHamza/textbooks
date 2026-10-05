@@ -10,11 +10,13 @@ Files are numbered in lecture order. `00_All_Chapters.pdf`, where present, is th
 | `compilers/02_Tokens_and_Regular_Expressions.pdf` | 24 |
 | `compilers/03_Automating_Lexical_Analysis.pdf` | 21 |
 | `compilers/03b_Companion_Lexer_Generation.pdf` (what the automata are for) | 9 |
+| `compilers/04_Lexical_Analysis_in_Practice.pdf` (NFA/DFA scanning, catch-all, language quirks, hand-written C scanner, flex) | 45 |
 
 Problem sets and solutions, in `compilers/problem-sets/`:
 `Problem_Set_1_Compilers_and_Computational_Theory.pdf` + `Problem_Set_1_Solutions.pdf`,
 `Problem_Set_2_Tokens_and_Regular_Expressions.pdf` + `Problem_Set_2_Solutions.pdf`,
 `Problem_Set_3_Automating_Lexical_Analysis.pdf` + `Problem_Set_3_Solutions.pdf`,
+`Problem_Set_4_Lexical_Analysis.pdf` (the chapter 4 textbook ends with a map from each problem to the sections that prepare it),
 `Comprehensive_Problem_Set_Lectures_1-3.pdf` (questions, quizzes and solutions in one file).
 
 ## Advanced Data Management
