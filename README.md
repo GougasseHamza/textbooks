@@ -59,6 +59,6 @@ Problem sets and solutions, in `operations-research/problem-sets/`:
 
 Exercises and project, in `machine-learning/exercises/`:
 `Exercises_Chapter_1.pdf`, `Exercises_Chapter_2.pdf`, `Review_Questions_Lecture_3.pdf`, `Tutorial_1.pdf`,
-`ML_Solutions_Tutorial1_Exercises_Review.pdf` (detailed solutions to all four, 32 pages),
+`ML_Solutions_Tutorial1_Exercises_Review.pdf` (detailed solutions to all four, each question directly above its answer, 35 pages),
 `Project_Part_1_Auditing_an_Intrusion_Detection_Dataset.pdf`,
 `Project_Part_2_Generative_and_Discriminative_Classification.pdf`.
