@@ -7,6 +7,7 @@ Files are numbered in lecture order. `00_All_Chapters.pdf`, where present, is th
 | File | Pages |
 |---|---|
 | `compilers/01_Introduction_to_Compilers.pdf` | 13 |
+| **`compilers/02-04_Lexical_Analysis_Complete.pdf`** (Lectures 2, 3 and 4 in one read: every automata method with a worked example, plus one end-to-end lexer example; start here) | 24 |
 | `compilers/02_Tokens_and_Regular_Expressions.pdf` | 24 |
 | `compilers/03_Automating_Lexical_Analysis.pdf` | 21 |
 | `compilers/03b_Companion_Lexer_Generation.pdf` (what the automata are for) | 9 |
