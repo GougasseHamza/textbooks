@@ -42,6 +42,7 @@ Labs and class examples, in `advanced-data-management/labs/` (no official soluti
 | `operations-research/04_Duality_of_Linear_Programs.pdf` | 26 |
 | `operations-research/05_Simplex_Tableau_and_Sensitivity_Analysis.pdf` (self-contained: every result proved, including those from earlier chapters) | 22 |
 | `operations-research/How_to_Write_a_Dual.pdf` (methodology guide: the sign rules and why) | 6 |
+| `operations-research/How_to_Manipulate_Vectors_Indices_and_Matrices.pdf` (methods guide: coordinates, x_B and x_N, products, inverses, inequalities, the five proof moves) | 8 |
 
 Problem sets and solutions, in `operations-research/problem-sets/`:
 `Problem_Set_1.pdf` + `Problem_Set_1_Solutions.pdf`,
