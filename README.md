@@ -35,12 +35,12 @@ Labs and class examples, in `advanced-data-management/labs/` (no official soluti
 ## Operations Research
 | File | Pages |
 |---|---|
-| `operations-research/00_All_Chapters.pdf` (Lectures 1 to 5 combined) | 98 |
+| `operations-research/00_All_Chapters.pdf` (Lectures 1 to 5 combined) | 106 |
 | `operations-research/01_From_Decisions_to_Models.pdf` | 31 |
 | `operations-research/02_Geometry_and_Algebra_of_Linear_Programs.pdf` | 21 |
 | `operations-research/03_Solving_Linear_Programs.pdf` | 17 |
 | `operations-research/04_Duality_of_Linear_Programs.pdf` | 26 |
-| `operations-research/05_Simplex_Tableau_and_Sensitivity_Analysis.pdf` | 14 |
+| `operations-research/05_Simplex_Tableau_and_Sensitivity_Analysis.pdf` (self-contained: every result proved, including those from earlier chapters) | 22 |
 | `operations-research/How_to_Write_a_Dual.pdf` (methodology guide: the sign rules and why) | 6 |
 
 Problem sets and solutions, in `operations-research/problem-sets/`:
