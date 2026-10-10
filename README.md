@@ -55,6 +55,8 @@ Problem sets and solutions, in `operations-research/problem-sets/`:
 `LP_Problem_Set_with_Solutions.pdf` (classics, tricks and proofs for Lectures 1 to 3),
 `Graphs_Set_1.pdf`, `Graphs_Set_2.pdf` (graph models, companions to Chapter 1).
 
+Algebra and proofs, Lectures 1 to 5: `OR_Theory_Review_and_Proof_Set.pdf` (13 pages: notation, ten algebraic moves, eleven proof patterns, theorem map, then 18 proof problems and 18 true/false statements) + `OR_Proof_Set_Solutions.pdf` (15 pages, full solutions under each problem).
+
 ## Machine Learning
 | File | Pages |
 |---|---|
