@@ -19,6 +19,7 @@ Problem sets and solutions, in `compilers/problem-sets/`:
 `Problem_Set_2_Tokens_and_Regular_Expressions.pdf` + `Problem_Set_2_Solutions.pdf`,
 `Problem_Set_3_Automating_Lexical_Analysis.pdf` + `Problem_Set_3_Solutions.pdf`,
 `Problem_Set_4_Lexical_Analysis.pdf` (the chapter 4 textbook ends with a map from each problem to the sections that prepare it),
+`Lexical_Analysis_Problem_Set.pdf` + `Lexical_Analysis_Problem_Set_Solutions.pdf` (one exercise per automata method of the combined guide, one per lexing concept, 20 true/false),
 `First_Follow_Advanced_Practice_Sheet.pdf` (parsers lecture),
 `Comprehensive_Problem_Set_Lectures_1-3.pdf` (questions, quizzes and solutions in one file).
 
