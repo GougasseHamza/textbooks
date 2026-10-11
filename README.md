@@ -72,6 +72,6 @@ Exercises and project, in `machine-learning/exercises/`:
 `Exercises_Chapter_1.pdf`, `Exercises_Chapter_2.pdf`, `Review_Questions_Lecture_3.pdf`, `Tutorial_1.pdf`,
 `ML_Solutions_Tutorial1_Exercises_Review.pdf` (detailed solutions to all four, each question directly above its answer, 35 pages),
 `ML_Maths_Problem_Sets_Problems_Only.pdf` + `ML_Maths_Problem_Sets_Solutions.pdf` (four computation and derivation sets, 25 problems, Lectures 2 to 4),
-`ML_Tutorial1_Extra_Practice_Problems.pdf` + `ML_Tutorial1_Extra_Practice_Solutions.pdf` (eight new problems in the style of Tutorial 1, one per tutorial problem with new settings and a twist each, plus ten quick drills),
+`ML_Tutorial1_Extra_Practice_Problems.pdf` + `ML_Tutorial1_Extra_Practice_Solutions.pdf` (the Tutorial 1 skills asked differently: reverse-engineering a decision rule, finding the mistakes in a solution, fitting KNN/LDA/Naive Bayes from raw rows, choosing an operating point and calibrating, five proofs, tool selection, detector evasion; plus twelve true/false with justification),
 `Project_Part_1_Auditing_an_Intrusion_Detection_Dataset.pdf`,
 `Project_Part_2_Generative_and_Discriminative_Classification.pdf`.
