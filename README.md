@@ -12,7 +12,7 @@ Files are numbered in lecture order. `00_All_Chapters.pdf`, where present, is th
 | `compilers/03_Automating_Lexical_Analysis.pdf` | 21 |
 | `compilers/03b_Companion_Lexer_Generation.pdf` (what the automata are for) | 9 |
 | `compilers/04_Lexical_Analysis_in_Practice.pdf` (NFA/DFA scanning, catch-all, language quirks, hand-written C scanner, flex) | 22 |
-| `compilers/05_Parsers_Top_Down_FIRST_FOLLOW_LL1.pdf` (parsers lecture: top-down vs bottom-up, left recursion and left factoring, recursive descent, FIRST and FOLLOW, LL(1) tables and parsing) | 17 |
+| `compilers/05_Parsers_Top_Down_FIRST_FOLLOW_LL1.pdf` (parsers lecture, rebuilt in concept order: grammars and notation, top-down vs bottom-up, recursive descent and the two questions it asks, FIRST and FOLLOW, LL(1) tables and parsing, then left recursion, left factoring and ambiguity) | 22 |
 
 Problem sets and solutions, in `compilers/problem-sets/`:
 `Problem_Set_1_Compilers_and_Computational_Theory.pdf` + `Problem_Set_1_Solutions.pdf`,
