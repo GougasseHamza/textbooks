@@ -1,0 +1,52 @@
+// ex24 -- three timed states; the PIR is only looked at in STANDBY
+const int PIR = 2;
+const int BUZZER = 11;
+const int GREEN = 13;
+const int RED = 12;
+const unsigned long ALERT_TIME = 3000, COOLDOWN_TIME = 2000, BEEP_HALF = 300;
+
+enum class State { STANDBY, ALERT, COOLDOWN };
+State currentState = State::STANDBY;
+unsigned long stateEnteredAt = 0, lastBeep = 0;
+
+void enterStandby() {
+  digitalWrite(GREEN, HIGH); digitalWrite(RED, LOW); digitalWrite(BUZZER, LOW);
+  currentState = State::STANDBY; stateEnteredAt = millis();
+  Serial.println("State: STANDBY");
+}
+void enterAlert() {
+  digitalWrite(GREEN, LOW); digitalWrite(RED, HIGH); digitalWrite(BUZZER, HIGH);
+  currentState = State::ALERT; stateEnteredAt = millis(); lastBeep = stateEnteredAt;
+  Serial.println("State: ALERT");
+}
+void enterCooldown() {
+  digitalWrite(RED, LOW); digitalWrite(BUZZER, LOW);
+  currentState = State::COOLDOWN; stateEnteredAt = millis();
+  Serial.println("State: COOLDOWN");
+}
+
+void setup() {
+  pinMode(PIR, INPUT);          // the sensor drives the line: no pull-up needed
+  pinMode(BUZZER, OUTPUT); pinMode(GREEN, OUTPUT); pinMode(RED, OUTPUT);
+  Serial.begin(9600);
+  enterStandby();
+}
+
+void loop() {
+  unsigned long now = millis();
+  switch (currentState) {
+    case State::STANDBY:
+      if (digitalRead(PIR) == HIGH) enterAlert();
+      break;
+    case State::ALERT:
+      if (now - stateEnteredAt >= ALERT_TIME) enterCooldown();
+      else if (now - lastBeep >= BEEP_HALF) {           // beep: toggle the buzzer
+        lastBeep = now;
+        digitalWrite(BUZZER, !digitalRead(BUZZER));
+      }
+      break;
+    case State::COOLDOWN:                                // PIR ignored here
+      if (now - stateEnteredAt >= COOLDOWN_TIME) enterStandby();
+      break;
+  }
+}

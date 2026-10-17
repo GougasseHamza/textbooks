@@ -1,0 +1,74 @@
+// Traffic-light lab, Task 5: a NIGHT state (yellow blinking forever) reachable from any state on Event::NIGHT_FALL,
+// built on the non-blocking FSM of ex22. A button on pin 2 simulates night fall; DAY_BREAK brings RED back.
+enum class State { GREEN, YELLOW, RED, NIGHT };
+enum class Event { TIMEOUT, BLINK, NIGHT_FALL, DAY_BREAK };
+struct Transition { State from; Event event; State to; void (*action)(); };
+
+const int ledRED = 6, ledYELLOW = 5, ledGREEN = 4;
+const int NIGHT_BUTTON = 2;
+const unsigned long RED_TIME = 5000, GREEN_TIME = 5000, YELLOW_TIME = 3000, BLINK_HALF = 100, NIGHT_HALF = 500;
+
+State currentState = State::RED;
+unsigned long stateEnteredAt = 0, blinkTime = 0;
+bool night = false;
+
+void allOff() { digitalWrite(ledRED, LOW); digitalWrite(ledGREEN, LOW); digitalWrite(ledYELLOW, LOW); }
+void turnOnRed()    { allOff(); digitalWrite(ledRED, HIGH);    stateEnteredAt = millis(); }
+void turnOnGreen()  { allOff(); digitalWrite(ledGREEN, HIGH);  stateEnteredAt = millis(); }
+void turnOnYellow() { allOff(); digitalWrite(ledYELLOW, HIGH); stateEnteredAt = millis(); blinkTime = stateEnteredAt; }
+void enterNight()   { allOff(); digitalWrite(ledYELLOW, HIGH); stateEnteredAt = millis(); blinkTime = stateEnteredAt; }
+void blinkYellow()  { if (millis() - blinkTime >= BLINK_HALF) { blinkTime = millis(); digitalWrite(ledYELLOW, !digitalRead(ledYELLOW)); } }
+void blinkNight()   { if (millis() - blinkTime >= NIGHT_HALF) { blinkTime = millis(); digitalWrite(ledYELLOW, !digitalRead(ledYELLOW)); } }
+
+Transition transitions[] = {
+  { State::RED,    Event::TIMEOUT,    State::GREEN,  &turnOnGreen  },
+  { State::GREEN,  Event::TIMEOUT,    State::YELLOW, &turnOnYellow },
+  { State::YELLOW, Event::BLINK,      State::YELLOW, &blinkYellow  },
+  { State::YELLOW, Event::TIMEOUT,    State::RED,    &turnOnRed    },
+  { State::RED,    Event::NIGHT_FALL, State::NIGHT,  &enterNight   },   // from ANY state: one row per state
+  { State::GREEN,  Event::NIGHT_FALL, State::NIGHT,  &enterNight   },
+  { State::YELLOW, Event::NIGHT_FALL, State::NIGHT,  &enterNight   },
+  { State::NIGHT,  Event::BLINK,      State::NIGHT,  &blinkNight   },   // self-loop, no timeout
+  { State::NIGHT,  Event::DAY_BREAK,  State::RED,    &turnOnRed    },
+};
+const int NB_TRANSITIONS = sizeof(transitions) / sizeof(transitions[0]);
+
+void processEvent(Event event = Event::TIMEOUT) {
+  for (int i = 0; i < NB_TRANSITIONS; i++) {
+    if (transitions[i].from == currentState && transitions[i].event == event) {
+      transitions[i].action(); currentState = transitions[i].to; break;
+    }
+  }
+}
+unsigned long durationOf(State s) { return s == State::RED ? RED_TIME : s == State::GREEN ? GREEN_TIME : YELLOW_TIME; }
+
+// ---- debounced button: true once per valid press ----
+const unsigned long DEBOUNCE_DELAY = 50;
+int buttonState = HIGH, lastReading = HIGH;
+unsigned long lastDebounceTime = 0;
+bool buttonPressed(int pin) {
+  int reading = digitalRead(pin);
+  bool pressed = false;
+  if (reading != lastReading) lastDebounceTime = millis();
+  if (millis() - lastDebounceTime > DEBOUNCE_DELAY && reading != buttonState) {
+    buttonState = reading;
+    if (buttonState == LOW) pressed = true;
+  }
+  lastReading = reading;
+  return pressed;
+}
+
+void setup() {
+  pinMode(ledRED, OUTPUT); pinMode(ledYELLOW, OUTPUT); pinMode(ledGREEN, OUTPUT);
+  pinMode(NIGHT_BUTTON, INPUT_PULLUP);
+  turnOnRed();
+}
+void loop() {
+  if (buttonPressed(NIGHT_BUTTON)) { night = !night; processEvent(night ? Event::NIGHT_FALL : Event::DAY_BREAK); }
+  unsigned long now = millis();
+  if (currentState == State::NIGHT) { processEvent(Event::BLINK); return; }
+  if (now - stateEnteredAt >= durationOf(currentState)) processEvent(Event::TIMEOUT);
+  else if (currentState == State::YELLOW) processEvent(Event::BLINK);
+}
+// New diagram: the three day states keep their cycle; every one of them has an extra arrow NIGHT_FALL -> NIGHT;
+// NIGHT has a BLINK self-loop and one arrow DAY_BREAK -> RED. 4 states, 9 transitions.

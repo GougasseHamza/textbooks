@@ -78,3 +78,12 @@ Exercises and project, in `machine-learning/exercises/`:
 `ML_Understanding_Test_Lectures_1-4.pdf` (chapter-by-chapter understanding test: 73 true/false statements and 40 open questions covering every concept of Lectures 1 to 4, with the full answer key at the end),
 `Project_Part_1_Auditing_an_Intrusion_Detection_Dataset.pdf`,
 `Project_Part_2_Generative_and_Discriminative_Classification.pdf`.
+
+## Embedded Systems (M233)
+| File | Pages |
+|---|---|
+| **`embedded-systems/Embedded_Systems_Complete_Guide.pdf`** (Lectures 1-2 and all labs from A to Z: Arduino Uno, C++ refresher for the AVR, digital I/O and pull resistors, debouncing, millis() timing, Serial, finite state machines; 27 exercises with solutions, every lab solved, one-page reference) | 34 |
+
+`embedded-systems/kit/` is an offline simulator and checker: `python3 check.py ex06` grades a sketch against an
+exercise, `python3 arduino_sim.py run x.ino --wave --press 1000:3` shows the pin/Serial timeline, two boards can be
+linked over Serial, and `python3 arduino_sim.py avr x.ino` type-checks for the real ATmega328P. See `kit/README.md`.

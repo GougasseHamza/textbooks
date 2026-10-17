@@ -1,0 +1,6 @@
+// Lab internal LED, Task 2.2: 100 ms ON, 900 ms OFF -> T = 1000 ms, f = 1 Hz, duty cycle D = 100/1000 = 10 %
+void setup() { pinMode(LED_BUILTIN, OUTPUT); }
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH); delay(100);
+  digitalWrite(LED_BUILTIN, LOW);  delay(900);
+}

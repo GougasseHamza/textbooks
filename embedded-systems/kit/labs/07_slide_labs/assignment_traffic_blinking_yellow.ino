@@ -1,0 +1,13 @@
+// Canvas assignment "Traffic Light with blinking Yellow V2": same cycle, yellow blinks 100 ms ON / 100 ms OFF for 3 s
+const int RED = 6, YELLOW = 5, GREEN = 4;
+void setLights(int r, int y, int g) { digitalWrite(RED, r); digitalWrite(YELLOW, y); digitalWrite(GREEN, g); }
+void setup() { pinMode(RED, OUTPUT); pinMode(YELLOW, OUTPUT); pinMode(GREEN, OUTPUT); }
+void loop() {
+  setLights(HIGH, LOW, LOW); delay(5000);
+  setLights(LOW, LOW, HIGH); delay(5000);
+  setLights(LOW, LOW, LOW);
+  for (int i = 0; i < 15; i++) {             // 15 x 200 ms = 3 s of blinking
+    digitalWrite(YELLOW, HIGH); delay(100);
+    digitalWrite(YELLOW, LOW);  delay(100);
+  }
+}

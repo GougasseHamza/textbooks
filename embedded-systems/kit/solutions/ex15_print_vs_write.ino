@@ -1,0 +1,14 @@
+// ex15 -- print(v): the decimal TEXT of v ("65" = bytes 54 53).  write(v): the single raw byte v (65 = 'A').
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    int b = Serial.read();     // 0..255 (int, because -1 means "nothing")
+    Serial.print(b);           // "65"
+    Serial.print(' ');
+    Serial.write(b);           // 'A'
+    Serial.println();
+  }
+}

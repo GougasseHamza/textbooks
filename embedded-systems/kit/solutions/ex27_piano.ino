@@ -1,0 +1,19 @@
+// ex27 -- arrays + loop; tone() runs a hardware timer so it does not block
+const int KEYS[] = {2, 3, 4};
+const unsigned int NOTES[] = {262, 294, 330};   // C4 D4 E4
+const int NB_KEYS = sizeof(KEYS) / sizeof(KEYS[0]);
+const int BUZZER = 8;
+
+void setup() {
+  for (int i = 0; i < NB_KEYS; i++) pinMode(KEYS[i], INPUT_PULLUP);
+  pinMode(BUZZER, OUTPUT);
+}
+
+void loop() {
+  int playing = -1;
+  for (int i = 0; i < NB_KEYS; i++) {
+    if (digitalRead(KEYS[i]) == LOW) { playing = i; break; }   // first (lowest pin) key held
+  }
+  if (playing >= 0) tone(BUZZER, NOTES[playing]);
+  else noTone(BUZZER);
+}

@@ -1,0 +1,11 @@
+// ex03 -- 100 ms ON / 900 ms OFF: duty cycle 10 %
+const int LED_PIN = 5;
+
+void setup() { pinMode(LED_PIN, OUTPUT); }
+
+void loop() {
+  digitalWrite(LED_PIN, HIGH);
+  delay(100);
+  digitalWrite(LED_PIN, LOW);
+  delay(900);
+}

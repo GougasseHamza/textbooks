@@ -1,0 +1,19 @@
+// ex14 -- PC -> Arduino. The received byte is a CHARACTER: compare with '1', not with 1.
+const int LED = LED_BUILTIN;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(LED, OUTPUT);
+}
+
+void loop() {
+  if (Serial.available() > 0) {        // never block waiting for data
+    char cmd = Serial.read();          // one byte, removed from the 64-byte buffer
+    if (cmd == '1') {
+      digitalWrite(LED, HIGH);
+    } else if (cmd == '0') {
+      digitalWrite(LED, LOW);
+    }
+    // '\n', '\r' and anything else: ignored
+  }
+}

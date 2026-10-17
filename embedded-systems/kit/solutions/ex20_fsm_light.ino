@@ -1,0 +1,57 @@
+// ex20 -- state-based reasoning: "where am I?" then "what does the event do here?"
+const int LED = 13;
+const int PB = 12;
+const unsigned long BLINK_PERIOD = 500;
+const unsigned long DEBOUNCE_DELAY = 50;
+
+enum class State { OFF, ON, BLINK };
+State currentState = State::OFF;
+unsigned long lastBlink = 0;
+
+// ---- debounced button (returns true once per press) ----
+int buttonState = HIGH, lastReading = HIGH;
+unsigned long lastDebounceTime = 0;
+bool buttonPressed() {
+  int reading = digitalRead(PB);
+  bool pressed = false;
+  if (reading != lastReading) lastDebounceTime = millis();
+  if (millis() - lastDebounceTime > DEBOUNCE_DELAY && reading != buttonState) {
+    buttonState = reading;
+    if (buttonState == LOW) pressed = true;
+  }
+  lastReading = reading;
+  return pressed;
+}
+
+// ---- actions ----
+void turnOff() { digitalWrite(LED, LOW); }
+void turnOn()  { digitalWrite(LED, HIGH); }
+void blink() {
+  unsigned long now = millis();
+  if (now - lastBlink >= BLINK_PERIOD) {
+    lastBlink = now;
+    digitalWrite(LED, !digitalRead(LED));   // reading an OUTPUT pin returns what we wrote
+  }
+}
+
+void setup() {
+  pinMode(LED, OUTPUT);
+  pinMode(PB, INPUT_PULLUP);
+  turnOff();
+}
+
+void loop() {
+  bool pressed = buttonPressed();
+  switch (currentState) {
+    case State::OFF:
+      if (pressed) { turnOn(); currentState = State::ON; }
+      break;
+    case State::ON:
+      if (pressed) { lastBlink = millis(); currentState = State::BLINK; }
+      break;
+    case State::BLINK:
+      if (pressed) { turnOff(); currentState = State::OFF; }
+      else blink();                         // "stay" action of the BLINK state
+      break;
+  }
+}

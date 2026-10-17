@@ -1,0 +1,27 @@
+// ex06 -- two independent non-blocking timers: one 'previous' timestamp per task
+const int GREEN = 12;
+const int RED = 11;
+const unsigned long GREEN_INTERVAL = 500;
+const unsigned long RED_INTERVAL = 1500;
+
+unsigned long prevGreen = 0, prevRed = 0;   // unsigned long: millis() is 32-bit
+bool greenOn = false, redOn = false;
+
+void setup() {
+  pinMode(GREEN, OUTPUT);
+  pinMode(RED, OUTPUT);
+}
+
+void loop() {
+  unsigned long now = millis();           // read the clock once per loop
+  if (now - prevGreen >= GREEN_INTERVAL) {
+    prevGreen = now;
+    greenOn = !greenOn;
+    digitalWrite(GREEN, greenOn);
+  }
+  if (now - prevRed >= RED_INTERVAL) {    // independent: its own timestamp
+    prevRed = now;
+    redOn = !redOn;
+    digitalWrite(RED, redOn);
+  }
+}

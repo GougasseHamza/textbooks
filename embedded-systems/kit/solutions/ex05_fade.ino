@@ -1,0 +1,16 @@
+// ex05 -- PWM fading. analogWrite(pin, d) outputs a ~490 Hz square wave with duty d/255;
+// the eye averages it into a brightness level.
+const int LED_PIN = 5;   // must be a PWM pin: 3, 5, 6, 9, 10, 11
+
+void setup() { pinMode(LED_PIN, OUTPUT); }
+
+void loop() {
+  for (int duty = 0; duty <= 255; duty += 5) {    // fade in
+    analogWrite(LED_PIN, duty);
+    delay(30);
+  }
+  for (int duty = 250; duty >= 0; duty -= 5) {    // fade out (255 was already shown)
+    analogWrite(LED_PIN, duty);
+    delay(30);
+  }
+}

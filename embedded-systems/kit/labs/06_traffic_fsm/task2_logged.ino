@@ -1,0 +1,45 @@
+// Traffic-light lab, Task 2: log every transition, e.g. "RED + TIMEOUT -> GREEN"  (blocking version of Listing 1 kept on purpose)
+enum class State { GREEN, YELLOW, RED };
+enum class Event { TIMEOUT, BLINK };
+struct Transition { State from; Event event; State to; void (*action)(); };
+const int ledRED = 6, ledYELLOW = 5, ledGREEN = 4;
+State currentState = State::RED;
+unsigned long startBlinkYellow = 0, blinkTime = 0;
+
+const char* stateName(State s) { return s == State::RED ? "RED" : s == State::GREEN ? "GREEN" : "YELLOW"; }
+const char* eventName(Event e) { return e == Event::TIMEOUT ? "TIMEOUT" : "BLINK"; }
+
+void turnOnYellow() { digitalWrite(ledRED, LOW); digitalWrite(ledGREEN, LOW); digitalWrite(ledYELLOW, HIGH); startBlinkYellow = millis(); blinkTime = startBlinkYellow; }
+void turnOnRed()    { digitalWrite(ledRED, HIGH); digitalWrite(ledGREEN, LOW); digitalWrite(ledYELLOW, LOW); delay(5000); }
+void turnOnGreen()  { digitalWrite(ledRED, LOW); digitalWrite(ledGREEN, HIGH); digitalWrite(ledYELLOW, LOW); delay(5000); }
+void blinkYellow()  { if (millis() - blinkTime >= 100) { blinkTime = millis(); digitalWrite(ledYELLOW, !digitalRead(ledYELLOW)); } }
+
+Transition transitions[] = {
+  { State::RED,    Event::TIMEOUT, State::GREEN,  &turnOnGreen  },
+  { State::GREEN,  Event::TIMEOUT, State::YELLOW, &turnOnYellow },
+  { State::YELLOW, Event::BLINK,   State::YELLOW, &blinkYellow  },
+  { State::YELLOW, Event::TIMEOUT, State::RED,    &turnOnRed    }
+};
+
+void processEvent(Event event = Event::TIMEOUT) {
+  for (int i = 0; i < 4; i++) {
+    if (transitions[i].from == currentState && transitions[i].event == event) {
+      if (transitions[i].from != transitions[i].to) {          // do not flood the monitor with the BLINK self-loop
+        Serial.print(stateName(currentState)); Serial.print(" + "); Serial.print(eventName(event));
+        Serial.print(" -> "); Serial.println(stateName(transitions[i].to));
+      }
+      transitions[i].action();
+      currentState = transitions[i].to;
+      break;
+    }
+  }
+}
+
+void setup() { pinMode(ledRED, OUTPUT); pinMode(ledYELLOW, OUTPUT); pinMode(ledGREEN, OUTPUT); Serial.begin(9600); }
+void loop() {
+  unsigned long now = millis();
+  switch (currentState) {
+    case State::RED: case State::GREEN: processEvent(Event::TIMEOUT); break;
+    case State::YELLOW: if (now - startBlinkYellow < 3000) processEvent(Event::BLINK); else processEvent(Event::TIMEOUT); break;
+  }
+}

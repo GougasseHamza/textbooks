@@ -1,0 +1,15 @@
+// Serial lab, Exercise 11 (final application), Station A: counts parts from 5, +1 every 2 s, LED ON when B confirms
+int nb_pieces = 5;
+unsigned long lastSend = 0;
+void setup() { Serial.begin(9600); pinMode(LED_BUILTIN, OUTPUT); }
+void loop() {
+  if (millis() - lastSend >= 2000) {
+    lastSend = millis();
+    Serial.write(nb_pieces);
+    nb_pieces++;
+  }
+  if (Serial.available() > 0) {
+    int reply = Serial.read();
+    if (reply == 1) digitalWrite(LED_BUILTIN, HIGH);
+  }
+}

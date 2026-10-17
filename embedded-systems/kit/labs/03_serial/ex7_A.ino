@@ -1,0 +1,6 @@
+// Serial lab, Exercise 7, Arduino A: send 1, wait 5 s, send 0, wait 5 s, repeat
+void setup() { Serial.begin(9600); }
+void loop() {
+  Serial.write(1); delay(5000);
+  Serial.write(0); delay(5000);
+}

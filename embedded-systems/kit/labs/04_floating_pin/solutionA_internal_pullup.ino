@@ -1,0 +1,20 @@
+// Floating-pin lab, Solution A: internal pull-up. Pressed = LOW. (Listing 2 of the lab)
+const int Pin_Input = 3;
+const int LED = 13;
+
+void setup() {
+  pinMode(Pin_Input, INPUT_PULLUP);   // ~20-50 kohm to 5 V inside the chip: the pin can no longer float
+  pinMode(LED, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  if (digitalRead(Pin_Input) == LOW) {   // button to GND closes: LOW
+    Serial.println("Button Pressed");
+    digitalWrite(LED, HIGH);
+  } else {
+    Serial.println("Button Released");
+    digitalWrite(LED, LOW);
+  }
+  delay(50);
+}

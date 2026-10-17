@@ -1,0 +1,71 @@
+// ex23 -- only the table and the event generation grow; processEvent() is untouched
+enum class State { GREEN, YELLOW, RED };
+enum class Event { TIMEOUT, BLINK, PED_REQUEST };
+
+struct Transition { State from; Event event; State to; void (*action)(); };
+
+const int ledRED = 6, ledYELLOW = 5, ledGREEN = 4;
+const int PED_BUTTON = 2;
+const unsigned long RED_TIME = 5000, GREEN_TIME = 5000, YELLOW_TIME = 3000, BLINK_HALF = 100;
+const unsigned long DEBOUNCE_DELAY = 50;
+
+State currentState = State::RED;
+unsigned long stateEnteredAt = 0, blinkTime = 0;
+
+void turnOnRed()    { digitalWrite(ledRED, HIGH); digitalWrite(ledGREEN, LOW); digitalWrite(ledYELLOW, LOW); stateEnteredAt = millis(); }
+void turnOnGreen()  { digitalWrite(ledRED, LOW); digitalWrite(ledGREEN, HIGH); digitalWrite(ledYELLOW, LOW); stateEnteredAt = millis(); }
+void turnOnYellow() { digitalWrite(ledRED, LOW); digitalWrite(ledGREEN, LOW); digitalWrite(ledYELLOW, HIGH); stateEnteredAt = millis(); blinkTime = stateEnteredAt; }
+void blinkYellow()  { if (millis() - blinkTime >= BLINK_HALF) { blinkTime = millis(); digitalWrite(ledYELLOW, !digitalRead(ledYELLOW)); } }
+
+Transition transitions[] = {
+  { State::RED,    Event::TIMEOUT,     State::GREEN,  &turnOnGreen  },
+  { State::GREEN,  Event::TIMEOUT,     State::YELLOW, &turnOnYellow },
+  { State::YELLOW, Event::BLINK,       State::YELLOW, &blinkYellow  },
+  { State::YELLOW, Event::TIMEOUT,     State::RED,    &turnOnRed    },
+  { State::GREEN,  Event::PED_REQUEST, State::YELLOW, &turnOnYellow },   // new
+  { State::RED,    Event::PED_REQUEST, State::GREEN,  &turnOnGreen  },   // new
+};
+const int NB_TRANSITIONS = sizeof(transitions) / sizeof(transitions[0]);
+
+void processEvent(Event event = Event::TIMEOUT) {           // unchanged engine
+  for (int i = 0; i < NB_TRANSITIONS; i++) {
+    if (transitions[i].from == currentState && transitions[i].event == event) {
+      transitions[i].action();
+      currentState = transitions[i].to;
+      break;
+    }
+  }
+}
+
+unsigned long durationOf(State s) {
+  if (s == State::RED) return RED_TIME;
+  if (s == State::GREEN) return GREEN_TIME;
+  return YELLOW_TIME;
+}
+
+int buttonState = HIGH, lastReading = HIGH;
+unsigned long lastDebounceTime = 0;
+bool buttonPressed() {
+  int reading = digitalRead(PED_BUTTON);
+  bool pressed = false;
+  if (reading != lastReading) lastDebounceTime = millis();
+  if (millis() - lastDebounceTime > DEBOUNCE_DELAY && reading != buttonState) {
+    buttonState = reading;
+    if (buttonState == LOW) pressed = true;
+  }
+  lastReading = reading;
+  return pressed;
+}
+
+void setup() {
+  pinMode(ledRED, OUTPUT); pinMode(ledYELLOW, OUTPUT); pinMode(ledGREEN, OUTPUT);
+  pinMode(PED_BUTTON, INPUT_PULLUP);
+  turnOnRed();
+}
+
+void loop() {
+  if (buttonPressed()) processEvent(Event::PED_REQUEST);    // external event
+  unsigned long now = millis();
+  if (now - stateEnteredAt >= durationOf(currentState)) processEvent(Event::TIMEOUT);
+  else if (currentState == State::YELLOW) processEvent(Event::BLINK);
+}
