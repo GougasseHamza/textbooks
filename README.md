@@ -60,7 +60,7 @@ Algebra and proofs, Lectures 1 to 5: `OR_Theory_Review_and_Proof_Set.pdf` (13 pa
 ## Machine Learning
 | File | Pages |
 |---|---|
-| `machine-learning/00_All_Chapters.pdf` (Lectures 1 to 4 combined) | 97 |
+| `machine-learning/00_All_Chapters.pdf` (Lectures 1 to 5 combined) | 127 |
 | `machine-learning/ML_Lectures_1-4_One_Continuous_Read.pdf` (every concept, named formula and course-style derivation in one read, with a notation key and a formula sheet) | 31 |
 | `machine-learning/ML_Metrics_One_Sheet.pdf` (TP/FP/FN/TN, every metric with its denominator and the question it answers, which cells you can know in a given situation, worked examples, traps) | 3 |
 | `machine-learning/ML_Revision_Pack_Lectures_1-4.pdf` (per chapter: revision sheet, understanding questions, quiz, maths derivations and proofs, all with answers; numerical applications at the end) | 31 |
@@ -68,10 +68,12 @@ Algebra and proofs, Lectures 1 to 5: `OR_Theory_Review_and_Proof_Set.pdf` (13 pa
 | `machine-learning/02_From_Representations_to_Decisions.pdf` | 32 |
 | `machine-learning/03_From_Fitting_to_Generalization.pdf` | 22 |
 | `machine-learning/04_Discriminative_and_Generative_Classification.pdf` | 27 |
+| `machine-learning/05_Learning_by_Combining_Models.pdf` (ensembles: voting, bagging and OOB, trees, random forests, MDI and permutation importance, gradient boosting, Newton leaf values, XGBoost gain, multi-class, stacking, mixture of experts; every formula proved and worked by hand) | 33 |
 
 Exercises and project, in `machine-learning/exercises/`:
-`Exercises_Chapter_1.pdf`, `Exercises_Chapter_2.pdf`, `Review_Questions_Lecture_3.pdf`, `Tutorial_1.pdf`,
+`Exercises_Chapter_1.pdf`, `Exercises_Chapter_2.pdf`, `Review_Questions_Lecture_3.pdf`, `Tutorial_1.pdf`, `Tutorial_2.pdf`,
 `ML_Solutions_Tutorial1_Exercises_Review.pdf` (detailed solutions to all four, each question directly above its answer, 35 pages),
+`ML_Solutions_Tutorial2.pdf` (Tutorial 2, ensembles: all nine problems worked in full, every number computed, each sub-question quoted above its answer, 18 pages),
 `ML_Maths_Problem_Sets_Problems_Only.pdf` + `ML_Maths_Problem_Sets_Solutions.pdf` (four computation and derivation sets, 25 problems, Lectures 2 to 4),
 `ML_Tutorial1_Extra_Practice_Problems.pdf` + `ML_Tutorial1_Extra_Practice_Solutions.pdf` (the Tutorial 1 skills asked differently: reverse-engineering a decision rule, finding the mistakes in a solution, fitting KNN/LDA/Naive Bayes from raw rows, choosing an operating point and calibrating, five proofs, tool selection, detector evasion; plus twelve true/false with justification),
 `ML_Understanding_Proofs_Experiments_Problems.pdf` + `ML_Understanding_Proofs_Experiments_Solutions.pdf` (Part I: eight understanding questions and four proof problems: proper losses, Hoeffding and model selection, LDA/NB as linear classifiers, cost versus prevalence; Part II: six real-world experiments to read, diagnose and design: learning curves, ablation and shortcuts, labels only from alerts, input-dependent costs, subgroup metrics, post-deployment monitoring),
