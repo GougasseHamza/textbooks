@@ -97,7 +97,7 @@ TPs and quiz, in `information-security/tps/`: `TP1_Clickjacking.pdf`, `TP2_State
 ## Embedded Systems (M233)
 | File | Pages |
 |---|---|
-| **`embedded-systems/Embedded_Systems_Complete_Guide.pdf`** (Lectures 1-2 and all labs from A to Z: Arduino Uno, C++ refresher for the AVR, digital I/O and pull resistors, debouncing, millis() timing, Serial, finite state machines; 27 exercises with solutions, every lab solved, one-page reference) | 34 |
+| **`embedded-systems/Embedded_Systems_Complete_Guide.pdf`** (Lectures 1-2 and all labs from A to Z: Arduino Uno, C++ refresher for the AVR, digital I/O and pull resistors, debouncing, millis() timing, Serial, finite state machines; 27 exercises with solutions, every lab solved, one-page reference; part K adds the five skills the past midterms grade beyond the lectures: energy budget of a battery node, platform choice, I/O inventory, FSM audit with the level-crossing and alarm case studies, code-reading traps) | 42 |
 | **`embedded-systems/Embedded_Systems_Midterms_Solved.pdf`** (the four past midterms, 2022-23 / 2023-24 / 2024-25 / Oct 2026, every exercise answered in full: QCM and true-false with justifications, wiring tables read off the breadboard figures, LED and energy calculations, code traces, bug hunts, FSM tables and state diagrams, complete non-blocking sketches; closes with a one-page sheet of every recurring fact and template) | 29 |
 
 `embedded-systems/kit/midterms/` holds the 18 midterm sketches; `python3 midterms/verify_midterms.py` re-runs them all in the simulator.
