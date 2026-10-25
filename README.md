@@ -98,7 +98,9 @@ TPs and quiz, in `information-security/tps/`: `TP1_Clickjacking.pdf`, `TP2_State
 | File | Pages |
 |---|---|
 | **`embedded-systems/Embedded_Systems_Complete_Guide.pdf`** (Lectures 1-2 and all labs from A to Z: Arduino Uno, C++ refresher for the AVR, digital I/O and pull resistors, debouncing, millis() timing, Serial, finite state machines; 27 exercises with solutions, every lab solved, one-page reference) | 34 |
+| **`embedded-systems/Embedded_Systems_Midterms_Solved.pdf`** (the four past midterms, 2022-23 / 2023-24 / 2024-25 / Oct 2026, every exercise answered in full: QCM and true-false with justifications, wiring tables read off the breadboard figures, LED and energy calculations, code traces, bug hunts, FSM tables and state diagrams, complete non-blocking sketches; closes with a one-page sheet of every recurring fact and template) | 29 |
 
+`embedded-systems/kit/midterms/` holds the 18 midterm sketches; `python3 midterms/verify_midterms.py` re-runs them all in the simulator.
 `embedded-systems/kit/` is an offline simulator and checker: `python3 check.py ex06` grades a sketch against an
 exercise, `python3 arduino_sim.py run x.ino --wave --press 1000:3` shows the pin/Serial timeline, two boards can be
 linked over Serial, and `python3 arduino_sim.py avr x.ino` type-checks for the real ATmega328P. See `kit/README.md`.
