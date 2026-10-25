@@ -81,6 +81,13 @@ Exercises and project, in `machine-learning/exercises/`:
 `Project_Part_1_Auditing_an_Intrusion_Detection_Dataset.pdf`,
 `Project_Part_2_Generative_and_Discriminative_Classification.pdf`.
 
+## Information Security
+| File | Pages |
+|---|---|
+| `information-security/Information_Security_Go_Deeper_Guide.pdf` (Lectures 1 to 5: foundations, stateful tracking, fingerprinting and protections, classical/symmetric crypto with DES and AES worked by hand, asymmetric crypto, hashing, MACs and signatures, PKI, steganography; every section = compact recap + "Go deeper" details + hard questions with answers; Appendix A solves Quiz 1, Appendix B lists exam-relevant TP takeaways) | 39 |
+
+TPs and quiz, in `information-security/tps/`: `TP1_Clickjacking.pdf`, `TP2_Stateful_Tracking.pdf`, `TP3_Browser_Fingerprinting.pdf`, `TP4_Breaking_the_Classics.pdf`, `TP5_AES.pdf`, `TP6_OpenSSL.pdf`, `Quiz_1_Web_Privacy.pdf`.
+
 ## Embedded Systems (M233)
 | File | Pages |
 |---|---|
