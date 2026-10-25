@@ -55,6 +55,8 @@ Problem sets and solutions, in `operations-research/problem-sets/`:
 `LP_Problem_Set_with_Solutions.pdf` (classics, tricks and proofs for Lectures 1 to 3),
 `Graphs_Set_1.pdf`, `Graphs_Set_2.pdf` (graph models, companions to Chapter 1).
 
+Midterm preparation, in `operations-research/midterm-prep/`: `OR_Midterm_Review_Guide.pdf` (24 pages: the review deck's five-station route, Model / Represent / Solve / Certify / Update, worked on one production example with an "exam checks" box per station; the 18 preparation exercises annotated with what each tests, the fastest route, the verified answer, the traps and a twist with its answer; a two-hour mock midterm with full solutions), the course's `Midterm_Review_Slides.pdf` and `Midterm_Prep_Exercises_and_Solutions.pdf`, and `verify.py` (exact basis-enumeration check of every number in the exercises and the mock).
+
 Algebra and proofs, Lectures 1 to 5: `OR_Theory_Review_and_Proof_Set.pdf` (13 pages: notation, ten algebraic moves, eleven proof patterns, theorem map, then 18 proof problems and 18 true/false statements) + `OR_Proof_Set_Solutions.pdf` (15 pages, full solutions under each problem).
 
 ## Machine Learning
