@@ -32,9 +32,10 @@ Problem sets and solutions, in `compilers/problem-sets/`:
 | `advanced-data-management/02_File_Organization_and_Storage.pdf` | 15 |
 | `advanced-data-management/03_Indexing.pdf` | 15 |
 | `advanced-data-management/04_Query_Processing_and_Operator_Algorithms.pdf` | 14 |
+| `advanced-data-management/05_Query_Optimization.pdf` (logical rewrites, statistics and histograms, selectivity and join-size estimation, the cost model, System-R join ordering, stale statistics and correlated columns, reading EXPLAIN, Lab 5 companion) | 18 |
 
 Labs and class examples, in `advanced-data-management/labs/` (no official solutions; each textbook chapter has a lab companion section):
-`Lab_3_Indexing.pdf`, `Lab_4_Operators_Joins_Sorting_Aggregation.pdf`,
+`Lab_3_Indexing.pdf`, `Lab_4_Operators_Joins_Sorting_Aggregation.pdf`, `Lab_5_Optimization_Estimates_Statistics_Bad_Plans.pdf`,
 `Chapter_1_Class_Examples.pdf`, `Chapter_4_Class_Examples.pdf`.
 
 ## Operations Research
