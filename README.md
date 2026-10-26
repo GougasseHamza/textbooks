@@ -15,6 +15,7 @@ Files are numbered in lecture order. `00_All_Chapters.pdf`, where present, is th
 | `compilers/05_Parsers_Top_Down_FIRST_FOLLOW_LL1.pdf` (parsers lecture, rebuilt in concept order: grammars and notation, top-down vs bottom-up, recursive descent and the two questions it asks, FIRST and FOLLOW, LL(1) tables and parsing, then left recursion, left factoring, epsilon-production elimination, selection sets and ambiguity) | 24 |
 
 Problem sets and solutions, in `compilers/problem-sets/`:
+`Exam_Kit_Lectures_1-4.pdf` + `Exam_Kit_Lectures_1-4_Solutions.pdf` (a 100-point practice exam on lectures 1 to 4 only: 20 justified MCQs, 5 pipeline questions, 12 constructions from regexes through Thompson, subset construction, minimisation, state elimination, derivatives, pumping lemma, combined DFA and scan traces, a C lexer bug, two flex specs and the HTML-comment DFA, then 20 true/false; `check_lex.py` rebuilds every automaton and scan trace),
 `Mock_Midterm_Exam.pdf` + `Mock_Midterm_Solutions.pdf` (the 100-point mock: 5 problems on lexical analysis, grammars and LL(1) parsing, every answer justified, with a box per problem saying where the method lives in the chapters and a coverage summary; `check_ll1.py` recomputes every FIRST/FOLLOW set, table and stack trace),
 `Problem_Set_1_Compilers_and_Computational_Theory.pdf` + `Problem_Set_1_Solutions.pdf`,
 `Problem_Set_2_Tokens_and_Regular_Expressions.pdf` + `Problem_Set_2_Solutions.pdf`,
