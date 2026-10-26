@@ -38,6 +38,8 @@ Labs and class examples, in `advanced-data-management/labs/` (no official soluti
 `Lab_3_Indexing.pdf`, `Lab_4_Operators_Joins_Sorting_Aggregation.pdf`, `Lab_5_Optimization_Estimates_Statistics_Bad_Plans.pdf`,
 `Chapter_1_Class_Examples.pdf`, `Chapter_4_Class_Examples.pdf`.
 
+Midterm prep, in `advanced-data-management/midterm-prep/`: `Mock_Midterm_Exam.pdf` (the 100-point mock: 5 MCQs, 6 discussion questions, 7 hands-on questions on the `shopstream` database) + `Mock_Midterm_Solutions.pdf` (every answer worked and justified, a box per problem mapping it to the chapters, a coverage summary, and a buffer-management primer for the three questions that test chapter 6 before it is lectured).
+
 ## Operations Research
 | File | Pages |
 |---|---|
