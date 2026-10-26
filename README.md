@@ -92,12 +92,12 @@ Exercises and project, in `machine-learning/exercises/`:
 ## Information Security
 | File | Pages |
 |---|---|
-| `information-security/00_All_Chapters.pdf` (Lectures 1 to 5 combined; textbook with diagrams for every mechanism: cookie jar, cross-site tracking, respawning, cookie syncing sequence, RTB, clickjacking, fingerprint pipeline, Feistel/DES/AES rounds, cipher modes, DH, RSA key generation, MAC vs signature, chain of trust; definitions, proofs, worked examples, and in every section a "Go deeper" box plus hard questions with answers; Quiz 1 solved inline) | 55 |
+| `information-security/00_All_Chapters.pdf` (Lectures 1 to 5 combined, older format; chapters 4 and 5 have since been rewritten as standalone volumes, see below; textbook with diagrams for every mechanism: cookie jar, cross-site tracking, respawning, cookie syncing sequence, RTB, clickjacking, fingerprint pipeline, Feistel/DES/AES rounds, cipher modes, DH, RSA key generation, MAC vs signature, chain of trust; definitions, proofs, worked examples, and in every section a "Go deeper" box plus hard questions with answers; Quiz 1 solved inline) | 55 |
 | `information-security/01_Foundations_of_Information_Security.pdf` | 11 |
 | `information-security/02_The_Web_and_Stateful_Tracking.pdf` | 17 |
 | `information-security/03_Stateless_Tracking_and_Browser_Defences.pdf` | 12 |
-| `information-security/04_Symmetric_Cryptography.pdf` | 14 |
-| `information-security/05_Public_Key_Cryptography_Integrity_and_Trust.pdf` | 12 |
+| `information-security/04_Symmetric_Cryptography.pdf` (rewritten 2026-10-26 in the textbook format of the compilers and data volumes: concept-order prose, a diagram and a hand-worked example per mechanism (Vigenere group attack, Feistel, DES round and key schedule, AES state and MixColumns, ECB/CBC/CTR, DH), an Anatomy table per algorithm saying what each part does and what breaks if it is removed, a checklist for custom-cipher exam problems, TP companion, common mistakes, classic problems) | 19 |
+| `information-security/05_Public_Key_Cryptography_Integrity_and_Trust.pdf` (rewritten 2026-10-26, same format: RSA from the arithmetic up with the slide and TP numbers, hybrid encryption, hashes and the birthday bound, passwords, MAC vs signature, certificates and PKI, steganography; Anatomy tables for RSA, hashes/MACs/signatures and PKI; OpenSSL Missions 1 and 3 companion) | 14 |
 | `information-security/Information_Security_Go_Deeper_Guide.pdf` (earlier slide-recap companion: Quiz 1 solved question by question, TP takeaways) | 39 |
 
 TPs and quiz, in `information-security/tps/`: `TP1_Clickjacking.pdf`, `TP2_Stateful_Tracking.pdf`, `TP3_Browser_Fingerprinting.pdf`, `TP4_Breaking_the_Classics.pdf`, `TP5_AES.pdf`, `TP6_OpenSSL.pdf`, `Quiz_1_Web_Privacy.pdf`.
