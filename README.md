@@ -37,6 +37,7 @@ Problem sets and solutions, in `compilers/problem-sets/`:
 Labs and class examples, in `advanced-data-management/labs/` (no official solutions; each textbook chapter has a lab companion section):
 `Lab_3_Indexing.pdf`, `Lab_4_Operators_Joins_Sorting_Aggregation.pdf`, `Lab_5_Optimization_Estimates_Statistics_Bad_Plans.pdf`,
 `Chapter_1_Class_Examples.pdf`, `Chapter_4_Class_Examples.pdf`.
+`All_Labs_Companion.pdf` (24 p): a from-zero SQL refresher built on the labs' own idioms (clause order, joins, FILTER, CASE, casts, `generate_series` data generation including the one-draw skew trick), the PostgreSQL instruments (EXPLAIN field by field, SET/RESET, pg_class/pg_stats, ANALYZE and CREATE STATISTICS, pg_relation_size/pageinspect, pg_buffercache, Parquet + DuckDB), every lab walked part by part with expected output and the submitted exercises answered, and a 16-item write-from-memory drill with solutions mapped to the mock midterm's hands-on questions, plus a one-page cheat sheet.
 
 Midterm prep, in `advanced-data-management/midterm-prep/`: `Mock_Midterm_Exam.pdf` (the 100-point mock: 5 MCQs, 6 discussion questions, 7 hands-on questions on the `shopstream` database) + `Mock_Midterm_Solutions.pdf` (every answer worked and justified, a box per problem mapping it to the chapters, a coverage summary, and a buffer-management primer for the three questions that test chapter 6 before it is lectured).
 
