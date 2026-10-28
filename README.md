@@ -71,6 +71,7 @@ Algebra and proofs, Lectures 1 to 5: `OR_Theory_Review_and_Proof_Set.pdf` (13 pa
 | `machine-learning/00_All_Chapters.pdf` (Lectures 1 to 5 combined) | 127 |
 | `machine-learning/ML_Lectures_1-4_One_Continuous_Read.pdf` (every concept, named formula and course-style derivation in one read, with a notation key and a formula sheet) | 31 |
 | `machine-learning/ML_Metrics_One_Sheet.pdf` (TP/FP/FN/TN, every metric with its denominator and the question it answers, which cells you can know in a given situation, worked examples, traps) | 3 |
+| `machine-learning/ML_Cheat_Sheet_Chapters_1-5.pdf` (two pages: page 1 every symbol of chapters 1-5 in one table with its meaning and chapter, plus when-to-use-what; page 2 every formula and decision rule, each with a one-line reading) | 2 |
 | `machine-learning/ML_Revision_Pack_Lectures_1-4.pdf` (per chapter: revision sheet, understanding questions, quiz, maths derivations and proofs, all with answers; numerical applications at the end) | 31 |
 | `machine-learning/01_What_Does_It_Mean_to_Learn.pdf` | 24 |
 | `machine-learning/02_From_Representations_to_Decisions.pdf` | 32 |
