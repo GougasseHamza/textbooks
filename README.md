@@ -90,6 +90,8 @@ Exercises and project, in `machine-learning/exercises/`:
 `Project_Part_1_Auditing_an_Intrusion_Detection_Dataset.pdf`,
 `Project_Part_2_Generative_and_Discriminative_Classification.pdf`.
 
+Quiz refreshers, in `machine-learning/quizzes/`, each as a questions file and a separate answer sheet, every number new: `Quiz_Refresher_Chapters_1_3_Questions.pdf` (5 p) + `_Answers.pdf` (5 p): 30 rapid-recall questions, 8 multiple choice with justification, 6 exam-style problems (three actions with costs, which number to report, kNN before and after scaling, least squares, interpolation and ridge, capacity selection and the bias-variance budget, fraud-detector metrics and leakage). `Quiz_Refresher_Chapter_4_Questions.pdf` (4 p) + `_Answers.pdf` (4 p): 20 recall, 8 multiple choice, 5 problems (a logistic classifier by hand, one-dimensional LDA versus QDA, a naive Bayes spam filter with and without smoothing, imbalance and prior shift, choosing a route). `Quiz_Refresher_Chapter_5_Questions.pdf` (4 p) + `_Answers.pdf` (4 p): 20 recall, 8 multiple choice, 5 problems (variance of an average, a Gini split with MDI credit, bootstrap and OOB arithmetic and m_try, two rounds of gradient boosting by hand, an XGBoost leaf and split gain).
+
 ## Information Security
 | File | Pages |
 |---|---|
