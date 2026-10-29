@@ -105,6 +105,8 @@ Quiz refreshers, in `machine-learning/quizzes/`, each as a questions file and a 
 
 TPs and quiz, in `information-security/tps/`: `TP1_Clickjacking.pdf`, `TP2_Stateful_Tracking.pdf`, `TP3_Browser_Fingerprinting.pdf`, `TP4_Breaking_the_Classics.pdf`, `TP5_AES.pdf`, `TP6_OpenSSL.pdf`, `Quiz_1_Web_Privacy.pdf`.
 
+Quiz refresher, in `information-security/quizzes/`: `Quiz_Refresher_Chapter_2_Questions.pdf` (5 p) + `Quiz_Refresher_Chapter_2_Answers.pdf` (6 p): 24 recall questions, 8 statement sets in the course quiz's format (mark every true statement, justify each), 6 exam-style problems with new hosts and cookies (the attachment rule on seven requests, parties and origins, two trackers' logs with and without third-party cookies, reading a respawning experiment, writing a cookie sync, framing the portal).
+
 ## Embedded Systems (M233)
 | File | Pages |
 |---|---|
