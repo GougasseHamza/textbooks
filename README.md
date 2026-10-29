@@ -105,7 +105,7 @@ Quiz refreshers, in `machine-learning/quizzes/`, each as a questions file and a 
 
 TPs and quiz, in `information-security/tps/`: `TP1_Clickjacking.pdf`, `TP2_Stateful_Tracking.pdf`, `TP3_Browser_Fingerprinting.pdf`, `TP4_Breaking_the_Classics.pdf`, `TP5_AES.pdf`, `TP6_OpenSSL.pdf`, `Quiz_1_Web_Privacy.pdf`.
 
-Quiz refresher, in `information-security/quizzes/`: `Quiz_Refresher_Chapter_2_Questions.pdf` (9 p) + `Quiz_Refresher_Chapter_2_Answers.pdf` (8 p): 24 recall questions, 8 statement sets, 6 exam-style problems with new hosts and cookies (the attachment rule on seven requests, parties and origins, two trackers' logs with and without third-party cookies, reading a respawning experiment, writing a cookie sync, framing the portal), and a Round D of 17 questions written exactly like Quiz 1 (scenario, four boxes, select every correct answer; Set-Cookie lines, HTTP exchanges, a respawning table, and a design challenge with a drawing box), every box justified in the answer sheet.
+Quiz refresher, in `information-security/quizzes/`: `Quiz_Refresher_Chapter_2_Questions.pdf` (10 p) + `Quiz_Refresher_Chapter_2_Answers.pdf` (8 p): 24 recall questions, 8 statement sets, 6 exam-style problems with new hosts and cookies (the attachment rule on seven requests, parties and origins, two trackers' logs with and without third-party cookies, reading a respawning experiment, writing a cookie sync, framing the portal), and a Round D of 17 questions written exactly like Quiz 1 (scenario, four boxes, select every correct answer; Set-Cookie lines, HTTP exchanges, a respawning table, and a design challenge with a drawing box), every box justified in the answer sheet.
 
 ## Embedded Systems (M233)
 | File | Pages |
