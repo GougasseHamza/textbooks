@@ -34,6 +34,7 @@ Problem sets and solutions, in `compilers/problem-sets/`:
 | `advanced-data-management/04_Query_Processing_and_Operator_Algorithms.pdf` | 15 |
 | `advanced-data-management/05_Query_Optimization.pdf` (logical rewrites, statistics and histograms, selectivity and join-size estimation, the cost model, System-R join ordering, stale statistics and correlated columns, reading EXPLAIN, Lab 5 companion) | 18 |
 | `advanced-data-management/06_Buffer_Management.pdf` (memory hierarchy and effective access time, why the DBMS runs its own cache, frames / page table / pin count / dirty bit, the read path, OPT / FIFO / LRU / Clock and PostgreSQL's clock-sweep, Belady's anomaly worked, sequential flooding and ring buffers, steal / force and the write-ahead log, reading `Buffers:` and `pg_buffercache`, hands-on companion, classic problems) | 21 |
+| `advanced-data-management/The_Essential_of_Chapter_6.pdf` (chapter 6 cut down to what the two mocks test: effective access time, the `Buffers:` line and "read is not disk", LRU / FIFO / clock-sweep traces, sequential flooding and ring buffers, steal / force and the write-ahead log, sizing `shared_buffers`; a mock-drill box per section) | 8 |
 
 Labs and class examples, in `advanced-data-management/labs/` (no official solutions; each textbook chapter has a lab companion section):
 `Lab_3_Indexing.pdf`, `Lab_4_Operators_Joins_Sorting_Aggregation.pdf`, `Lab_5_Optimization_Estimates_Statistics_Bad_Plans.pdf`,
