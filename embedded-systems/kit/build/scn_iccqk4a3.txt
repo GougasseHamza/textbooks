@@ -1,0 +1,4 @@
+duration 15000
+tick 100
+seed 12345
+link 0 1

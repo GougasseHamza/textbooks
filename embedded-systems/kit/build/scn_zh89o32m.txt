@@ -1,0 +1,5 @@
+duration 8000
+tick 100
+seed 12345
+link 0 1
+at 5500 serial 1 \x03

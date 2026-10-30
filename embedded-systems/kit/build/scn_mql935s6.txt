@@ -1,0 +1,9 @@
+duration 7000
+tick 100
+seed 12345
+at 1000 pin 0 2 0
+at 2000 pin 0 2 1
+at 3000 pin 0 3 0
+at 4000 pin 0 3 1
+at 5000 pin 0 4 0
+at 6000 pin 0 4 1

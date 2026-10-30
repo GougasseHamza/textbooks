@@ -1,0 +1,5 @@
+duration 3000
+tick 100
+seed 12345
+at 500 serial 0 25\n
+at 1500 serial 0 A\n

@@ -1,0 +1,3 @@
+duration 1000
+tick 100
+seed 12345

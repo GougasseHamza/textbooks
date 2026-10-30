@@ -1,0 +1,7 @@
+duration 5000
+tick 100
+seed 12345
+at 1000 serial 0 1\n
+at 2000 serial 0 0\n
+at 3000 serial 0 x\n
+at 4000 serial 0 1

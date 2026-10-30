@@ -1,0 +1,5 @@
+duration 12000
+tick 100
+seed 12345
+at 6000 pin 0 3 0 bounce 5
+at 6150 pin 0 3 1 bounce 5

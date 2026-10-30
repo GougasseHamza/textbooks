@@ -1,0 +1,8 @@
+duration 3000
+tick 100
+seed 12345
+at 200 serial 0 A
+at 600 serial 0 0
+at 1000 serial 0 1
+at 1400 serial 0 2
+at 1800 serial 0 B

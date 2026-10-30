@@ -1,0 +1,7 @@
+duration 6000
+tick 100
+seed 12345
+at 1000 serial 0 ON\n
+at 2000 serial 0 BLINK\n
+at 4000 serial 0 OFF\n
+at 5000 serial 0 foo\n
